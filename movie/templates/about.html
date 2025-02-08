@@ -1,9 +1,12 @@
-from django.shortcuts import render#-
-from django.http import HttpResponse
-
-# Create your views here.
-
-def home(request):
-    #return HttpResponse('<h1>Welcome to Home Page</h1>')
-    #return render(request, 'home.html')
-    return render(request, 'home.html', {'name':'Juan Esteban Alzate Ospina'})
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to about page, <span style="color: blue;">{{ name }}</span></h1>
+    <h2>This is the full home page</h2>
+</body>
+</html>
