@@ -24,7 +24,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'  # URL para archivos estáticos
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')  # Ruta de archivos estáticos
+    os.path.join(BASE_DIR, 'static'),
+      'moviereviews/static/',  # Ruta de archivos estáticos
 ]
 
 # Quick-start development settings - unsuitable for production
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'movie',
+    'news',
 ]
 
 MIDDLEWARE = [
@@ -66,7 +68,7 @@ ROOT_URLCONF = 'moviereviews.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'moviereviews/templates')], # Ruta de plantillas
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
